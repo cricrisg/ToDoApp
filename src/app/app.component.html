@@ -1,0 +1,21 @@
+<div class="container bg-light">
+
+  <header class="row mt-4">
+<!-- Formulario -->
+<div class="col-6 bg-dark p-4">
+  <app-formularios (nuevaTarea)="onAddTarea($event)">  
+  </app-formularios>
+</div>
+<!-- Filtros -->
+<div class="col-6 bg-dark p-4">
+  <app-filtros (busquedaEnviada)="onBusquedaTarea($event)" (prioridadEnviada)="onfiltroTarea($event)"></app-filtros>
+</div>
+  </header>
+
+  <main>
+<!-- Lista de tareas -->
+    <app-lista-tareas [listaTareas]="arrTareas" (borrarTarea)="onDeleteTarea($event)"></app-lista-tareas>
+
+  </main>
+
+</div>

@@ -1,0 +1,21 @@
+<section *ngIf="listaTareas.length !==0">
+
+  <h3 class="my-3">Lista de tareas</h3>
+  <article class="p-3 mb-3 d-flex justify-content-between" 
+  [ngClass]="{'bg-danger': tarea.priority==='urgente','bg-primary': tarea.priority=== 'diaria', 'bg-success': tarea.priority==='mensual'}" 
+  *ngFor="let tarea of listaTareas">
+
+    <h5> TAREA: {{tarea.title}} - PRIORIDAD DE LA TAREA: {{tarea.priority}}</h5>
+
+    <button class="btn btn-light text-black" (click)="delete(tarea.id)">Borrar</button>
+
+  </article>
+
+</section>
+
+<section *ngIf="listaTareas.length ===0">
+  <article class="bg-secondary p-3 d-flex justify-content-between my-2">
+    <h4>No hay tareas</h4>
+  </article>
+  
+</section>

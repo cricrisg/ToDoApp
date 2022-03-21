@@ -1,0 +1,11 @@
+<div class="d-flex flex-column">
+  <input class="mb-3 form-control" type="text" placeholder="Introduce una tarea" [(ngModel)]="newTask.title">
+
+  <select id="prioridad" class="form-select" [(ngModel)]="newTask.priority">
+    <option value="" selected>Prioridad de la tarea</option>
+    <option value="mensual">Mensual</option>
+    <option value="diaria">Diaria</option>
+    <option value="urgente">Urgente</option>
+  </select>
+  <button class="btn btn-light mt-3" (click)="guardarTarea()" >GUARDAR</button>
+</div>

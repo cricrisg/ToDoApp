@@ -1,0 +1,19 @@
+<div class="form">
+
+  <label for="search" class="form-label text-white">Buscador</label>
+  <input type="text" id="search" class="form-control" placeholder="Introduce la tarea a buscar" (input)="capturaBusqueda($event)">
+
+  <label for="priority" class="form-label text-white">Filtro por prioridad</label>
+  <select id="priority" class="form-select" (change)="filtrarPrioridad($event)">
+  <option value="" selected>Selecciona una prioridad</option>
+  <option value="diaria">Diaria</option>
+  <option value="mensual">Mensual</option>
+  <option value="urgente">Urgente</option>
+
+
+</select>
+</div>
+
+
+
+
